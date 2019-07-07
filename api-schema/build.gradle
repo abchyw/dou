@@ -1,0 +1,14 @@
+jar {
+    enabled = true
+}
+
+sourceSets {
+    generated {}
+    main.java.srcDirs = generated.java.srcDirs // treat generated source as main
+}
+
+compileGeneratedJava.enabled = false // don't compile generated source as generated source
+
+dependencies {
+    implementation("io.swagger:swagger-annotations:${versions.swagger}")
+}

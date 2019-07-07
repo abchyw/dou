@@ -18,3 +18,7 @@ out/
 *.iws
 *.iml
 *.ipr
+
+### open-api-generator ##
+**/generated/**
+
