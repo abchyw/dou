@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'dou'
+fileTree('.') {
+    include '**/build.gradle'
+    exclude(
+            'build.gradle', // Exclude the root build file.
+            '**/node_modules/**',
+            '**/jruby/**',
+    )
+}.collect {
+    relativePath(it.parent).replace(File.separator, ':')
+}.sort()
+        .each {
+            include it
+        }

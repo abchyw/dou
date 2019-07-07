@@ -1,0 +1,20 @@
+**/build/**
+
+## gradle
+.gradle
+out/
+
+## intellij
+.idea/
+.idea/artifacts
+.idea/libraries
+.idea/dataSources
+.idea/httpRequests
+.idea/dictionaries
+.idea/.name
+.idea/*.xml
+!/.idea/
+!/.idea/codeStyles/
+*.iws
+*.iml
+*.ipr
