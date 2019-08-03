@@ -1,0 +1,13 @@
+{
+  "name": "dou",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:abchyw/dou.git",
+  "license": "MIT",
+  "scripts": {
+    "merge": "sh ./api-schema/merge.sh"
+  },
+  "dependencies": {
+    "multi-file-swagger": "^2.3.0"
+  }
+}

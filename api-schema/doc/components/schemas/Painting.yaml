@@ -1,0 +1,4 @@
+properties:
+  name:
+    type: string
+    description: name of the painting

@@ -4,6 +4,9 @@
 .gradle
 out/
 
+## node modules
+node_modules/
+
 ## intellij
 .idea/
 .idea/artifacts
@@ -21,4 +24,5 @@ out/
 
 ### open-api-generator ##
 **/generated/**
+**/gen_docs/**
 

@@ -1,0 +1,16 @@
+get:
+  tags:
+    - paintings
+  summary: Finds paintings
+  description: Multiple status values can be provided with comma separated strings
+  responses:
+    '200':
+      description: successful operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/Painting"
+    '400':
+      description: Invalid status value
