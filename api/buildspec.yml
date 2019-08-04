@@ -4,6 +4,7 @@ evn:
   variables:
     DOCKER_REPOSITORY: abchyw8611/dou-api
     JAR_FILE: "build/libs/api-0.0.1-SNAPSHOT.jar"
+  parameter-store:
     DOCKER_LOGIN_PASSWORD: /CodeBuild/dockerLoginPassword
 phases:
   install:
