@@ -22,4 +22,4 @@ phases:
       - ./gradlew :api:build
       - cd api
       - docker build --no-cache -t ${DOCKER_REPOSITORY}:latest . --build-arg JAR_FILE=${JAR_FILE}
-      - docker push ${REPOSITORY_URI}:latest
+      - docker push ${DOCKER_REPOSITORY}:latest
