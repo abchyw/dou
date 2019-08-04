@@ -11,7 +11,7 @@ phases:
       java: openjdk8
       docker: 18
     commands:
-  prebuild:
+  pre_build:
     commands:
       - docker login -u abchyw8611 -p {DOCKER_LOGIN_PASSWORD}
       - yarn && yarn merge
