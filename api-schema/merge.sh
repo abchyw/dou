@@ -9,4 +9,6 @@ root=${PWD}
 # the reference files specified by $ref
 cd ${root}/api-schema/doc
 
+mkdir ${root}/api-schema/build
+
 multi-file-swagger -o yaml openapi.yaml > ${root}/api-schema/build/openapi.yaml
