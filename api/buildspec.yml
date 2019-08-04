@@ -9,7 +9,7 @@ env:
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: openjdk11
       docker: 18
     commands:
   pre_build:
