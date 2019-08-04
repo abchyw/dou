@@ -14,3 +14,12 @@ get:
               $ref: "#/components/schemas/Painting"
     '400':
       description: Invalid status value
+  x-amazon-apigateway-integration:
+    uri: "http://${nlb_dns_name}/api/paintings"
+    connectionType: VPC_LINK
+    httpMethod: GET
+    type: http_proxy
+    responses:
+      default:
+        statusCode: "200"
+    connectionId: "${vpc_link_id}"
