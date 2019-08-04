@@ -2,7 +2,10 @@
 
 action=$1
 
+exe_path="`dirname \"$0\"`"
+
 generate_classes(){
+  cd ${exe_path}
   docker run --rm \
       -v ${PWD}/build:/local/doc \
       -v ${PWD}/src/generated/java:/local/out/src/main/java \
