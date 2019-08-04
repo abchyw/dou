@@ -12,7 +12,7 @@ public class PaintingController implements PaintingsApi {
     public ResponseEntity<List<Painting>> paintingsGet() {
         return ResponseEntity.ok(
                 List.of(new Painting()
-                        .name("Sunflowers"))
+                        .name("Sunflowers +1"))
         );
     }
 }
