@@ -11,11 +11,13 @@ phases:
       java: openjdk8
       docker: 18
   prebuild:
-    - docker login -u abchyw8611 -p {DOCKER_LOGIN_PASSWORD}
-    - yarn && yarn merge
-    - sh api-schema/gen_source.sh class
+    commands:
+      - docker login -u abchyw8611 -p {DOCKER_LOGIN_PASSWORD}
+      - yarn && yarn merge
+      - sh api-schema/gen_source.sh class
   build:
-    - ./gradlew :api:build
-    - cd api
-    - docker build --no-cache -t ${DOCKER_REPOSITORY}:latest . --build-arg JAR_FILE=${JAR_FILE}
-    - docker push ${REPOSITORY_URI}:latest
+    commands:
+      - ./gradlew :api:build
+      - cd api
+      - docker build --no-cache -t ${DOCKER_REPOSITORY}:latest . --build-arg JAR_FILE=${JAR_FILE}
+      - docker push ${REPOSITORY_URI}:latest
