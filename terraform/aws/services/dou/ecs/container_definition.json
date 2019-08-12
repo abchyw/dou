@@ -1,0 +1,13 @@
+[
+    {
+        "name": "dou-api",
+        "image": "abchyw8611/dou-api",
+        "essential": true,
+        "memory": 512,
+        "portMappings": [
+            {
+                "containerPort": 8080
+            }
+        ]
+    }
+]
