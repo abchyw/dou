@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  dou-api:
+    image: abchyw8611/dou-api
+    environment:
+      - GREETING_MESSAGE=${GREETING_MESSAGE}
+    ports:
+      - 8080:8080
