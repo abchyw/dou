@@ -3,4 +3,9 @@ version: 0.2
 phases:
   build:
     commands: 
-      docker run --rm -v front:/app -w /app node:10.15.3-alpine "yarn && yarn build"
+      - docker run --rm \
+        -v front:/app \
+        -w /app node:10.15.3-alpine sh -c "yarn && yarn build"
+  post_build:
+    commands:
+      
