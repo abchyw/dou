@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "logs:CreateLogStream",
+            "logs:CreateLogGroup",
+            "logs:PutLogEvents"
+          ],
+          "Resource": "*"
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
+            "s3:DeleteObject",
+            "s3:PutObject"
+          ],
+          "Resource": [
+            "${front_bucket_arn}",
+            "${front_bucket_arn}/*"
+          ]
+        }
+      ]
+}

@@ -17,6 +17,13 @@ resource "aws_iam_role" "code-build-dou-front-deploy-role" {
   }
 }
 
+resource "aws_iam_role_policy" "code-build-dou-front-deploy-policy" {
+  name = "code-build-dou-front-deploy-policy"
+  role = "${aws_iam_role.code-build-dou-front-deploy-role.id}"
+  policy = local.codebuild_policy
+}
+
+
 resource "aws_codebuild_project" "dou-front-deploy" {
   name = "dou-front"
   description = "deploy front end."
