@@ -12,5 +12,5 @@ phases:
         -w /app node:10.15.3-alpine sh -c "yarn && yarn build"
   post_build:
     commands:
-      - aws s3 sync ./build s3://{BUCKET_NAME}
+      - aws s3 sync ./build s3://${BUCKET_NAME}
       
