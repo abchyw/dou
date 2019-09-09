@@ -6,6 +6,7 @@
           "Action": [
             "logs:CreateLogStream",
             "logs:CreateLogGroup",
+            "s3:ListBucket",
             "logs:PutLogEvents"
           ],
           "Resource": "*"

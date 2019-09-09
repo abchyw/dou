@@ -13,6 +13,11 @@ resource "aws_s3_bucket" "front" {
    acl = "private"
    policy = data.template_file.cf_origin_access_identity_policy.rendered
 
+   website {
+     index_document = "index.html"
+     error_document = "index.html"
+   }
+
    versioning {
      enabled = local.versioning
    }
