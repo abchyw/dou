@@ -39,6 +39,11 @@ resource "aws_codebuild_project" "dou-front-deploy" {
     image = "aws/codebuild/docker:18.09.0"
     type = "LINUX_CONTAINER"
     privileged_mode = true
+
+    environment_variable {
+      name = "BUCKET_NAME"
+      value = local.front_bucket_name
+    }
   }
 
   source {
