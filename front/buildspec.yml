@@ -6,7 +6,8 @@ phases:
       - BASE_PATH=$(pwd)
   build:
     commands: 
-      - docker run --rm \
+      - |
+        docker run --rm \
         -v ${BASE_PATH}/front:/app \
         -w /app node:10.15.3-alpine sh -c "yarn && yarn build"
   post_build:
