@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - BASE_PATH=${pwd}
+      - BASE_PATH=$(pwd)
   build:
     commands: 
       - docker run --rm \
